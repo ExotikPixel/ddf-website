@@ -49,33 +49,18 @@
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .nav-wordmark {
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
+    .nav-logo {
       text-decoration: none;
-      line-height: 1;
-    }
-    .nav-wordmark .parent {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-    }
-    .nav-wordmark .brand {
       display: flex;
-      align-items: baseline;
-      gap: 6px;
+      align-items: center;
     }
-    .nav-wordmark .pixel-text {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--white);
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1);
     }
+
+    /* keep old selectors in case referenced elsewhere */
     .nav-wordmark .prod-text {
       font-family: var(--font-body);
       font-weight: 600;
@@ -556,12 +541,8 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-wordmark" href="/">
-      <span class="parent">Designer Dance Floors</span>
-      <div class="brand">
-        <span class="pixel-text">PIXEL</span>
-        <span class="prod-text">PRODUCTION</span>
-      </div>
+    <a class="nav-logo" href="/">
+      <img src="logo-pixel.png" alt="Pixel Production" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -579,10 +560,12 @@
           <div class="line"></div>
           <span>Mississauga, Ontario</span>
         </div>
+        <div style="margin-bottom: 28px;">
+          <img src="logo-pixel.png" alt="Pixel Production" style="height: 72px; width: auto; filter: brightness(0) invert(1);" />
+        </div>
         <h1>
           <span class="line1">Print that</span>
           <span class="line2">makes an impression.</span>
-          <span class="line3">Pixel Production</span>
         </h1>
         <p>From welcome signs and wooden backdrops to window graphics and large-format prints — production-quality results for events, brands, and businesses across the GTA.</p>
         <div class="hero-actions">
@@ -724,8 +707,12 @@
   <!-- FOOTER -->
   <footer>
     <div>
-      <div class="footer-parent">Designer Dance Floors</div>
-      <a class="footer-pixel" href="/">PIXEL <span>PRODUCTION</span></a>
+      <a href="/" style="display: block; margin-bottom: 6px;">
+        <img src="logo-pixel.png" alt="Pixel Production" style="height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;" />
+      </a>
+      <a href="https://designerdancefloors.com" style="display: block; margin-bottom: 8px;">
+        <img src="logo-ddf.png" alt="Designer Dance Floors" style="height: 22px; width: auto; filter: brightness(0) invert(1); opacity: 0.35;" />
+      </a>
       <div class="footer-addr">6730 Davand Drive, Unit 6/7 — Mississauga, Ontario</div>
     </div>
     <div class="footer-links">
