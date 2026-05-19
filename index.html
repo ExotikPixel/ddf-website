@@ -3,59 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DDF-Pixel — Print That Makes an Impression</title>
-  <meta name="description" content="From welcome signs to window graphics, DDF-Pixel brings your event and brand to life. Submit your print brief today." />
+  <title>Pixel Production — Designer Dance Floors</title>
+  <meta name="description" content="From welcome signs to window graphics, Pixel Production brings your event and brand to life. Submit your print brief today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #f8f7f4;
-      --charcoal: #131313;
-      --charcoal-60: #535353;
-      --border: #e8e3d9;
-      --beige: #f0ece4;
+      --black: #0d0d0d;
+      --white: #ffffff;
+      --off-white: #f7f5f0;
+      --mid: #4a4a4a;
+      --border: #e0ddd8;
       --gold: #b8955a;
       --gold-dark: #9d7d4d;
       --gold-light: #faf6ef;
-      --font-h: 'Playfair Display', 'Cormorant Garamond', serif;
-      --font-b: 'Montserrat', 'DM Sans', sans-serif;
-      --shadow-soft: 0 4px 12px rgba(19,19,19,0.08);
-      --shadow-elevated: 0 8px 24px rgba(19,19,19,0.12);
+      --font-slab: 'Abril Fatface', serif;
+      --font-script: 'Dancing Script', cursive;
+      --font-display: 'Oswald', sans-serif;
+      --font-body: 'Montserrat', sans-serif;
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      background: var(--cream);
-      color: var(--charcoal);
-      font-family: var(--font-b);
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
       -webkit-font-smoothing: antialiased;
     }
 
-    /* NAV */
+    /* ── NAV ── */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--charcoal);
+      background: var(--black);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 48px;
       height: 68px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-    .nav-logo {
-      font-family: var(--font-h);
+
+    .nav-wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      text-decoration: none;
+      line-height: 1;
+    }
+    .nav-wordmark .parent {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .nav-wordmark .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .nav-wordmark .pixel-text {
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 20px;
-      letter-spacing: 2px;
-      color: #fff;
-      text-decoration: none;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--white);
     }
-    .nav-logo span {
+    .nav-wordmark .prod-text {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       color: var(--gold);
     }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -63,220 +92,273 @@
       list-style: none;
     }
     .nav-links a {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.55);
       text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta {
-      background: var(--gold);
-      color: #fff;
-      padding: 10px 24px;
-      font-family: var(--font-b);
-      font-size: 12px;
-      font-weight: 600;
-      text-decoration: none;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 6px;
-    }
-    .nav-cta:hover { background: var(--gold-dark); }
-
-    /* HERO */
-    .hero {
-      min-height: calc(100vh - 68px);
-      display: flex;
-      align-items: center;
-      padding: 80px 48px;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 80px;
-    }
-    .hero-text { flex: 1; max-width: 580px; }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--gold);
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--white);
+      padding: 10px 24px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .nav-cta:hover { background: var(--gold-dark); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--black);
+      min-height: calc(100vh - 68px);
+      display: flex;
+      align-items: center;
+      padding: 80px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: 'PIXEL';
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(200px, 22vw, 340px);
+      letter-spacing: -4px;
+      color: rgba(255,255,255,0.03);
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .hero-text { flex: 1; max-width: 620px; position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 28px;
     }
-    .hero-tag::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .hero h1 {
-      font-family: var(--font-h);
-      font-size: clamp(42px, 5.5vw, 68px);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: var(--charcoal);
-      margin-bottom: 24px;
-    }
-    .hero h1 em {
-      font-style: italic;
+    .hero-eyebrow .line { width: 32px; height: 1px; background: var(--gold); }
+    .hero-eyebrow span {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       color: var(--gold);
     }
-    .hero p {
-      font-size: 17px;
-      line-height: 1.75;
-      color: var(--charcoal-60);
-      margin-bottom: 40px;
-      max-width: 460px;
+
+    .hero h1 {
+      line-height: 1.0;
+      margin-bottom: 28px;
     }
+    .hero h1 .line1 {
+      display: block;
+      font-family: var(--font-slab);
+      font-size: clamp(52px, 7vw, 88px);
+      color: var(--white);
+      letter-spacing: -1px;
+    }
+    .hero h1 .line2 {
+      display: block;
+      font-family: var(--font-script);
+      font-size: clamp(48px, 6.5vw, 82px);
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-top: -4px;
+    }
+    .hero h1 .line3 {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
     .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
     .btn-primary {
       background: var(--gold);
-      color: #fff;
+      color: var(--white);
       padding: 15px 32px;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      letter-spacing: 0.8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      border-radius: 6px;
+      text-decoration: none;
+      border-radius: 4px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
     .btn-primary:hover { background: var(--gold-dark); }
-    .btn-secondary {
-      color: var(--charcoal);
-      font-size: 13px;
+
+    .btn-ghost {
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
       font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       text-decoration: none;
-      letter-spacing: 0.5px;
-      border-bottom: 1.5px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
       padding-bottom: 2px;
     }
-    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
 
-    .hero-visual {
-      flex: 1;
+    /* Hero grid cards */
+    .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      max-width: 400px;
+      gap: 12px;
+      max-width: 340px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
     }
-    .hero-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 10px;
+    .hero-grid-card {
+      border: 1px solid rgba(255,255,255,0.1);
       padding: 24px 20px;
       aspect-ratio: 1;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      box-shadow: 0 2px 4px rgba(19,19,19,0.04);
+      border-radius: 6px;
     }
-    .hero-card:nth-child(2) {
-      background: var(--charcoal);
-      border-color: var(--charcoal);
-      margin-top: 28px;
-    }
-    .hero-card:nth-child(3) {
-      background: var(--gold);
-      border-color: var(--gold);
-      margin-top: -28px;
-    }
-    .hero-card:nth-child(4) { background: var(--beige); }
-    .hero-card-icon { font-size: 26px; margin-bottom: 10px; }
-    .hero-card-label {
-      font-size: 12px;
-      font-weight: 600;
+    .hero-grid-card:nth-child(1) { background: rgba(255,255,255,0.04); }
+    .hero-grid-card:nth-child(2) { background: var(--gold); border-color: var(--gold); margin-top: 24px; }
+    .hero-grid-card:nth-child(3) { background: rgba(255,255,255,0.08); margin-top: -24px; }
+    .hero-grid-card:nth-child(4) { background: rgba(255,255,255,0.04); }
+    .hero-grid-card .icon { font-size: 24px; margin-bottom: 10px; }
+    .hero-grid-card .label {
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 0.5px;
-      color: inherit;
+      color: rgba(255,255,255,0.7);
     }
-    .hero-card:nth-child(2) .hero-card-label { color: rgba(255,255,255,0.9); }
-    .hero-card:nth-child(3) .hero-card-label { color: #fff; }
+    .hero-grid-card:nth-child(2) .label { color: var(--white); }
 
-    /* DIVIDER TEXT */
-    .marquee-strip {
-      background: var(--charcoal);
-      padding: 14px 0;
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--gold);
+      padding: 12px 0;
       overflow: hidden;
       white-space: nowrap;
     }
-    .marquee-inner {
+    .ticker-inner {
       display: inline-flex;
-      gap: 0;
-      animation: marquee 22s linear infinite;
+      animation: ticker 24s linear infinite;
     }
-    .marquee-item {
+    .ticker-item {
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      padding: 0 32px;
+      color: var(--white);
+      padding: 0 28px;
     }
-    .marquee-item span { color: var(--gold); margin-right: 32px; }
-    @keyframes marquee {
+    .ticker-item .dot { color: rgba(255,255,255,0.5); margin-left: 28px; }
+    @keyframes ticker {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
 
-    /* SERVICES */
+    /* ── SERVICES ── */
     .services {
-      background: #fff;
+      background: var(--off-white);
       padding: 96px 48px;
     }
     .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
+
+    .section-eyebrow {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      margin-bottom: 16px;
     }
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .section-title {
-      font-family: var(--font-h);
-      font-size: clamp(30px, 3.5vw, 46px);
+    .section-eyebrow .line { width: 24px; height: 1px; background: var(--gold); }
+    .section-eyebrow span {
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 56px;
-      max-width: 520px;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
     }
+
+    .section-title {
+      font-family: var(--font-slab);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      margin-bottom: 56px;
+      max-width: 540px;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .section-title em {
+      font-style: italic;
+      font-family: var(--font-script);
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.1em;
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
+      gap: 2px;
     }
     .service-item {
-      background: var(--cream);
+      background: var(--white);
       padding: 32px 28px;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
     }
-    .service-item:hover {
-      background: var(--gold-light);
-      border-color: var(--gold);
-      box-shadow: var(--shadow-soft);
+    .service-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
     }
-    .service-number {
-      font-family: var(--font-h);
+    .service-item:hover::after { width: 100%; }
+    .service-item:hover { background: var(--gold-light); }
+
+    .service-num {
+      font-family: var(--font-display);
       font-size: 11px;
       font-weight: 600;
       color: var(--gold);
@@ -284,16 +366,16 @@
       margin-bottom: 14px;
     }
     .service-name {
-      font-family: var(--font-h);
-      font-size: 19px;
-      font-weight: 600;
+      font-family: var(--font-slab);
+      font-size: 20px;
+      font-weight: 400;
       line-height: 1.3;
     }
 
-    /* HOW IT WORKS */
+    /* ── HOW IT WORKS ── */
     .how {
       padding: 96px 48px;
-      background: var(--cream);
+      background: var(--white);
     }
     .steps {
       display: grid;
@@ -304,122 +386,169 @@
     .step-num {
       width: 48px;
       height: 48px;
-      border: 1.5px solid var(--gold);
-      color: var(--gold);
-      font-family: var(--font-h);
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-display);
       font-size: 18px;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      border-radius: 50%;
+      border-radius: 4px;
     }
     .step h3 {
-      font-family: var(--font-h);
-      font-size: 20px;
-      font-weight: 600;
+      font-family: var(--font-slab);
+      font-size: 22px;
+      font-weight: 400;
       margin-bottom: 10px;
-      letter-spacing: -0.01em;
     }
-    .step p { font-size: 14px; line-height: 1.75; color: var(--charcoal-60); }
+    .step p { font-size: 14px; line-height: 1.8; color: var(--mid); }
 
-    /* TRUST BAR */
-    .trust {
-      background: var(--beige);
-      padding: 56px 48px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    /* ── STATS ── */
+    .stats {
+      background: var(--black);
+      padding: 64px 48px;
     }
-    .trust-inner {
+    .stats-inner {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       gap: 32px;
       flex-wrap: wrap;
     }
-    .trust-item {
+    .stat {
       text-align: center;
-      flex: 1;
-      min-width: 160px;
     }
-    .trust-item .num {
-      font-family: var(--font-h);
-      font-size: 42px;
-      font-weight: 700;
-      color: var(--charcoal);
+    .stat-num {
+      font-family: var(--font-slab);
+      font-size: 56px;
+      color: var(--white);
       line-height: 1;
       margin-bottom: 8px;
     }
-    .trust-item .num span { color: var(--gold); }
-    .trust-item .label {
-      font-size: 12px;
+    .stat-num span { color: var(--gold); }
+    .stat-label {
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--charcoal-60);
+      color: rgba(255,255,255,0.35);
     }
 
-    /* CTA BAND */
+    /* ── CTA BAND ── */
     .cta-band {
-      background: var(--charcoal);
+      background: var(--off-white);
       padding: 96px 48px;
       text-align: center;
+      border-top: 1px solid var(--border);
     }
-    .cta-band .section-label { justify-content: center; }
-    .cta-band .section-label::before { display: none; }
     .cta-band h2 {
-      font-family: var(--font-h);
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 16px;
-      letter-spacing: -0.02em;
+      font-family: var(--font-slab);
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
-    .cta-band h2 em { font-style: italic; color: var(--gold); }
+    .cta-band h2 em {
+      font-style: italic;
+      font-family: var(--font-script);
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.1em;
+    }
     .cta-band p {
-      color: rgba(255,255,255,0.55);
       font-size: 16px;
+      line-height: 1.75;
+      color: var(--mid);
       margin-bottom: 40px;
-      max-width: 480px;
+      max-width: 460px;
       margin-left: auto;
       margin-right: auto;
-      line-height: 1.7;
     }
+    .btn-primary-dark {
+      background: var(--black);
+      color: var(--white);
+      padding: 16px 40px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary-dark:hover { background: var(--gold); }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer {
-      background: #0d0d0d;
-      color: rgba(255,255,255,0.4);
+      background: var(--black);
+      color: rgba(255,255,255,0.35);
       padding: 40px 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 20px;
     }
-    .footer-logo {
-      font-family: var(--font-h);
-      font-weight: 700;
+    .footer-brand { text-decoration: none; }
+    .footer-parent {
+      font-size: 9px;
+      font-weight: 600;
       letter-spacing: 2px;
-      color: #fff;
-      font-size: 16px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 4px;
     }
-    .footer-logo span { color: var(--gold); }
-    .footer-addr { font-size: 12px; margin-top: 6px; }
-    footer a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; }
+    .footer-pixel {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .footer-pixel span { color: var(--gold); }
+    .footer-addr {
+      font-size: 12px;
+      margin-top: 5px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    footer a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; }
     footer a:hover { color: var(--gold); }
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-    /* RESPONSIVE */
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
-      .hero { flex-direction: column; padding: 48px 20px; min-height: auto; gap: 48px; }
-      .hero-visual { display: none; }
-      .services, .how, .cta-band { padding: 64px 20px; }
-      .trust { padding: 48px 20px; }
-      footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; gap: 20px; }
+      .hero { padding: 56px 20px; min-height: auto; }
+      .hero-grid { display: none; }
+      .hero-inner { gap: 0; }
+      .services, .how, .cta-band, .stats { padding: 64px 20px; }
+      footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+      .ticker-item { padding: 0 20px; }
     }
   </style>
 </head>
@@ -427,7 +556,13 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="/">DDF-<span>PIXEL</span></a>
+    <a class="nav-wordmark" href="/">
+      <span class="parent">Designer Dance Floors</span>
+      <div class="brand">
+        <span class="pixel-text">PIXEL</span>
+        <span class="prod-text">PRODUCTION</span>
+      </div>
+    </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
@@ -437,105 +572,96 @@
   </nav>
 
   <!-- HERO -->
-  <section style="background: var(--cream);">
-    <div class="hero">
+  <section class="hero">
+    <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-tag">Mississauga, Ontario</div>
-        <h1>Print that makes an <em>impression.</em></h1>
-        <p>From welcome signs and wooden backdrops to window graphics and large-format prints — DDF-Pixel delivers production-quality results for events, brands, and businesses across the GTA.</p>
+        <div class="hero-eyebrow">
+          <div class="line"></div>
+          <span>Mississauga, Ontario</span>
+        </div>
+        <h1>
+          <span class="line1">Print that</span>
+          <span class="line2">makes an impression.</span>
+          <span class="line3">Pixel Production</span>
+        </h1>
+        <p>From welcome signs and wooden backdrops to window graphics and large-format prints — production-quality results for events, brands, and businesses across the GTA.</p>
         <div class="hero-actions">
           <a class="btn-primary" href="https://jobs.ddfpixel.com">Submit a Job Brief →</a>
-          <a class="btn-secondary" href="#services">See what we print</a>
+          <a class="btn-ghost" href="#services">See what we print</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-card-icon">🖨️</div>
-          <div class="hero-card-label">Large Format Print</div>
+      <div class="hero-grid">
+        <div class="hero-grid-card">
+          <div class="icon">🖨️</div>
+          <div class="label">Large Format</div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🪵</div>
-          <div class="hero-card-label">Wooden Backdrops</div>
+        <div class="hero-grid-card">
+          <div class="icon">🪵</div>
+          <div class="label">Wooden Backdrops</div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🪟</div>
-          <div class="hero-card-label">Window Graphics</div>
+        <div class="hero-grid-card">
+          <div class="icon">🪟</div>
+          <div class="label">Window Graphics</div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">✉️</div>
-          <div class="hero-card-label">Cardstock Printing</div>
+        <div class="hero-grid-card">
+          <div class="icon">✉️</div>
+          <div class="label">Cardstock Print</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee-strip" aria-hidden="true">
-    <div class="marquee-inner">
-      <span class="marquee-item">Large Format Print <span>·</span></span>
-      <span class="marquee-item">Welcome Signs <span>·</span></span>
-      <span class="marquee-item">Wooden Backdrops <span>·</span></span>
-      <span class="marquee-item">Window Graphics <span>·</span></span>
-      <span class="marquee-item">Vinyl Wraps <span>·</span></span>
-      <span class="marquee-item">Event Signage <span>·</span></span>
-      <span class="marquee-item">Cardstock Printing <span>·</span></span>
-      <span class="marquee-item">Custom Orders <span>·</span></span>
-      <span class="marquee-item">Large Format Print <span>·</span></span>
-      <span class="marquee-item">Welcome Signs <span>·</span></span>
-      <span class="marquee-item">Wooden Backdrops <span>·</span></span>
-      <span class="marquee-item">Window Graphics <span>·</span></span>
-      <span class="marquee-item">Vinyl Wraps <span>·</span></span>
-      <span class="marquee-item">Event Signage <span>·</span></span>
-      <span class="marquee-item">Cardstock Printing <span>·</span></span>
-      <span class="marquee-item">Custom Orders <span>·</span></span>
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Large Format Print<span class="dot">·</span></span>
+      <span class="ticker-item">Welcome Signs<span class="dot">·</span></span>
+      <span class="ticker-item">Wooden Backdrops<span class="dot">·</span></span>
+      <span class="ticker-item">Window Graphics<span class="dot">·</span></span>
+      <span class="ticker-item">Vinyl Wraps<span class="dot">·</span></span>
+      <span class="ticker-item">Event Signage<span class="dot">·</span></span>
+      <span class="ticker-item">Cardstock Printing<span class="dot">·</span></span>
+      <span class="ticker-item">Custom Orders<span class="dot">·</span></span>
+      <span class="ticker-item">Large Format Print<span class="dot">·</span></span>
+      <span class="ticker-item">Welcome Signs<span class="dot">·</span></span>
+      <span class="ticker-item">Wooden Backdrops<span class="dot">·</span></span>
+      <span class="ticker-item">Window Graphics<span class="dot">·</span></span>
+      <span class="ticker-item">Vinyl Wraps<span class="dot">·</span></span>
+      <span class="ticker-item">Event Signage<span class="dot">·</span></span>
+      <span class="ticker-item">Cardstock Printing<span class="dot">·</span></span>
+      <span class="ticker-item">Custom Orders<span class="dot">·</span></span>
     </div>
   </div>
 
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="section-inner">
-      <div class="section-label">What we do</div>
-      <h2 class="section-title">Everything you need — under one roof.</h2>
+      <div class="section-eyebrow">
+        <div class="line"></div>
+        <span>What we do</span>
+      </div>
+      <h2 class="section-title">Everything you need —<br>under <em>one roof.</em></h2>
       <div class="services-grid">
-        <div class="service-item"><div class="service-number">01</div><div class="service-name">Large Format Print</div></div>
-        <div class="service-item"><div class="service-number">02</div><div class="service-name">Welcome Signs</div></div>
-        <div class="service-item"><div class="service-number">03</div><div class="service-name">Wooden Backdrops</div></div>
-        <div class="service-item"><div class="service-number">04</div><div class="service-name">Window Graphics</div></div>
-        <div class="service-item"><div class="service-number">05</div><div class="service-name">Cardstock Printing</div></div>
-        <div class="service-item"><div class="service-number">06</div><div class="service-name">Vinyl Wraps</div></div>
-        <div class="service-item"><div class="service-number">07</div><div class="service-name">Event Signage</div></div>
-        <div class="service-item"><div class="service-number">08</div><div class="service-name">Custom Orders</div></div>
+        <div class="service-item"><div class="service-num">01</div><div class="service-name">Large Format Print</div></div>
+        <div class="service-item"><div class="service-num">02</div><div class="service-name">Welcome Signs</div></div>
+        <div class="service-item"><div class="service-num">03</div><div class="service-name">Wooden Backdrops</div></div>
+        <div class="service-item"><div class="service-num">04</div><div class="service-name">Window Graphics</div></div>
+        <div class="service-item"><div class="service-num">05</div><div class="service-name">Cardstock Printing</div></div>
+        <div class="service-item"><div class="service-num">06</div><div class="service-name">Vinyl Wraps</div></div>
+        <div class="service-item"><div class="service-num">07</div><div class="service-name">Event Signage</div></div>
+        <div class="service-item"><div class="service-num">08</div><div class="service-name">Custom Orders</div></div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <div class="trust">
-    <div class="trust-inner">
-      <div class="trust-item">
-        <div class="num">48<span>hr</span></div>
-        <div class="label">Rush Turnaround</div>
-      </div>
-      <div class="trust-item">
-        <div class="num">GTA<span>.</span></div>
-        <div class="label">Local Pickup Available</div>
-      </div>
-      <div class="trust-item">
-        <div class="num">8<span>+</span></div>
-        <div class="label">Print Formats</div>
-      </div>
-      <div class="trust-item">
-        <div class="num">100<span>%</span></div>
-        <div class="label">Production Quality</div>
-      </div>
-    </div>
-  </div>
-
   <!-- HOW IT WORKS -->
   <section class="how" id="process">
     <div class="section-inner">
-      <div class="section-label">The process</div>
-      <h2 class="section-title">Simple from brief to print.</h2>
+      <div class="section-eyebrow">
+        <div class="line"></div>
+        <span>The process</span>
+      </div>
+      <h2 class="section-title">Simple from<br>brief to <em>print.</em></h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
@@ -561,24 +687,55 @@
     </div>
   </section>
 
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">48<span>hr</span></div>
+        <div class="stat-label">Rush Turnaround</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-label">Print Formats</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">GTA<span>.</span></div>
+        <div class="stat-label">Local Pickup</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Production Quality</div>
+      </div>
+    </div>
+  </div>
+
   <!-- CTA BAND -->
   <section class="cta-band">
-    <div class="section-label" style="color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;">Ready to get started?</div>
-    <h2>Let's bring your vision<br><em>to life.</em></h2>
+    <div class="section-eyebrow" style="justify-content: center; margin-bottom: 20px;">
+      <div class="line"></div>
+      <span>Ready to get started?</span>
+      <div class="line"></div>
+    </div>
+    <h2>Let's bring your<br>vision <em>to life.</em></h2>
     <p>Submit your brief online — no back-and-forth needed. Our team gets straight to work.</p>
-    <a class="btn-primary" href="https://jobs.ddfpixel.com" style="font-size: 14px; padding: 16px 40px;">Submit a Job Brief →</a>
+    <a class="btn-primary-dark" href="https://jobs.ddfpixel.com">Submit a Job Brief →</a>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div>
-      <div class="footer-logo">DDF-<span>PIXEL</span></div>
+      <div class="footer-parent">Designer Dance Floors</div>
+      <a class="footer-pixel" href="/">PIXEL <span>PRODUCTION</span></a>
       <div class="footer-addr">6730 Davand Drive, Unit 6/7 — Mississauga, Ontario</div>
     </div>
-    <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+    <div class="footer-links">
       <a href="mailto:jobs@ddfpixel.com">jobs@ddfpixel.com</a>
       <a href="https://jobs.ddfpixel.com">Submit a Brief</a>
       <a href="https://jobs.ddfpixel.com/login">Client Portal</a>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 Designer Dance Floors — Pixel Production. All rights reserved.</span>
+      <span>Mississauga, Ontario</span>
     </div>
   </footer>
 
