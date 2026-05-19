@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DDF-Pixel — Print That Makes an Impression</title>
+  <meta name="description" content="From welcome signs to window graphics, DDF-Pixel brings your event and brand to life. Submit your print brief today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F8F6F2;
+      --charcoal: #1A1A1A;
+      --charcoal-60: #6B6B6B;
+      --charcoal-border: #E0DEDA;
+      --coral: #FF4D2D;
+      --coral-dark: #CC3D22;
+      --coral-light: #FFF2EF;
+      --font-h: 'Bricolage Grotesque', sans-serif;
+      --font-b: 'Manrope', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--charcoal);
+      font-family: var(--font-b);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #1A1A1A;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 3px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-cta {
+      background: var(--coral);
+      color: #fff;
+      padding: 10px 22px;
+      font-family: var(--font-b);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+    .nav-cta:hover { background: var(--coral-dark); }
+
+    /* HERO */
+    .hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 60px;
+    }
+    .hero-text { flex: 1; max-width: 580px; }
+    .hero-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--coral);
+      background: var(--coral-light);
+      padding: 5px 12px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: var(--font-h);
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1.05;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+    }
+    .hero h1 span { color: var(--coral); }
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--charcoal-60);
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--coral);
+      color: #fff;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--coral-dark); }
+    .btn-secondary {
+      color: var(--charcoal);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid var(--charcoal-border);
+      padding-bottom: 2px;
+    }
+    .btn-secondary:hover { border-color: var(--coral); color: var(--coral); }
+    .hero-visual {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 420px;
+    }
+    .hero-card {
+      background: #fff;
+      border: 1px solid var(--charcoal-border);
+      padding: 20px;
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .hero-card:nth-child(2) { background: var(--charcoal); color: #fff; margin-top: 24px; }
+    .hero-card:nth-child(3) { background: var(--coral); color: #fff; margin-top: -24px; }
+    .hero-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .hero-card-label { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
+
+    /* SERVICES */
+    .services {
+      background: #fff;
+      padding: 96px 40px;
+    }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: var(--font-h);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 800;
+      margin-bottom: 56px;
+      max-width: 540px;
+      line-height: 1.15;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2px;
+    }
+    .service-item {
+      background: var(--bg);
+      padding: 32px 24px;
+      border: 1px solid var(--charcoal-border);
+    }
+    .service-item:hover { background: var(--coral-light); border-color: var(--coral); }
+    .service-number {
+      font-family: var(--font-h);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--coral);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .service-name {
+      font-family: var(--font-h);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* HOW IT WORKS */
+    .how {
+      padding: 96px 40px;
+      background: var(--bg);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 40px;
+      margin-top: 56px;
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--coral);
+      color: #fff;
+      font-family: var(--font-h);
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .step h3 {
+      font-family: var(--font-h);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .step p { font-size: 14px; line-height: 1.7; color: var(--charcoal-60); }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--charcoal);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: var(--font-h);
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .cta-band p {
+      color: #999;
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #666;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      font-family: var(--font-h);
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #fff;
+      font-size: 15px;
+    }
+    footer a { color: #666; text-decoration: none; font-size: 13px; }
+    footer a:hover { color: var(--coral); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .hero { flex-direction: column; padding: 48px 20px; min-height: auto; gap: 40px; }
+      .hero-visual { display: none; }
+      .services, .how, .cta-band { padding: 64px 20px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">DDF-PIXEL</a>
+    <a class="nav-cta" href="https://jobs.ddfpixel.com">Submit a Brief →</a>
+  </nav>
+
+  <!-- HERO -->
+  <section style="background: var(--bg);">
+    <div class="hero">
+      <div class="hero-text">
+        <div class="hero-tag">Mississauga, Ontario</div>
+        <h1>Print that makes an <span>impression.</span></h1>
+        <p>From welcome signs and wooden backdrops to window graphics and large-format prints — DDF-Pixel delivers production-quality results for events, brands, and businesses.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://jobs.ddfpixel.com">Submit a Job Brief →</a>
+          <a class="btn-secondary" href="#services">See what we print</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon">🖨️</div>
+          <div class="hero-card-label">Large Format Print</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🪵</div>
+          <div class="hero-card-label">Wooden Backdrops</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🪟</div>
+          <div class="hero-card-label">Window Graphics</div>
+        </div>
+        <div class="hero-card" style="background: var(--bg);">
+          <div class="hero-card-icon">✉️</div>
+          <div class="hero-card-label">Cardstock Printing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <div class="section-label">What we do</div>
+      <h2 class="section-title">Everything you need — under one roof.</h2>
+      <div class="services-grid">
+        <div class="service-item"><div class="service-number">01</div><div class="service-name">Large Format Print</div></div>
+        <div class="service-item"><div class="service-number">02</div><div class="service-name">Welcome Signs</div></div>
+        <div class="service-item"><div class="service-number">03</div><div class="service-name">Wooden Backdrops</div></div>
+        <div class="service-item"><div class="service-number">04</div><div class="service-name">Window Graphics</div></div>
+        <div class="service-item"><div class="service-number">05</div><div class="service-name">Cardstock Printing</div></div>
+        <div class="service-item"><div class="service-number">06</div><div class="service-name">Vinyl Wraps</div></div>
+        <div class="service-item"><div class="service-number">07</div><div class="service-name">Event Signage</div></div>
+        <div class="service-item"><div class="service-number">08</div><div class="service-name">Custom Orders</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="section-inner">
+      <div class="section-label">The process</div>
+      <h2 class="section-title">Simple from brief to print.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Submit your brief</h3>
+          <p>Fill in your job details, upload your artwork, and set your deadline — all in one form.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>We review it</h3>
+          <p>Our team reviews your brief and gets back to you with confirmation and any questions.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Into production</h3>
+          <p>Once approved, your job goes straight to the production floor for printing.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Ready for you</h3>
+          <p>Pick up or receive your order on time — every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>Ready to get printing?</h2>
+    <p>Submit your brief online — no back-and-forth needed.</p>
+    <a class="btn-primary" href="https://jobs.ddfpixel.com" style="display:inline-flex; font-size:17px; padding:18px 40px;">Submit a Job Brief →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-logo">DDF-PIXEL</div>
+      <div style="margin-top:6px; font-size:13px;">6730 Davand Drive, Unit 6/7 — Mississauga, Ontario</div>
+    </div>
+    <div style="display:flex; gap:24px; align-items:center;">
+      <a href="mailto:jobs@ddfpixel.com">jobs@ddfpixel.com</a>
+      <a href="https://jobs.ddfpixel.com">Submit a Brief</a>
+      <a href="https://jobs.ddfpixel.com/login">Client Portal</a>
+    </div>
+  </footer>
+
+</body>
+</html>
