@@ -2,729 +2,538 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pixel Production — Designer Dance Floors</title>
-  <meta name="description" content="From welcome signs to window graphics, Pixel Production brings your event and brand to life. Submit your print brief today." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DDF x Pixel — Dance floors, backdrops &amp; signs in the GTA</title>
+  <meta name="description" content="Custom dance floors, printed backdrops, structures, wedding stationery and signs — designed, printed and installed across the Greater Toronto Area. Send a brief and get a proof." />
+  <link rel="canonical" href="https://ddfpixel.com/" />
+  <meta name="theme-color" content="#ebe6e1" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DDF x Pixel" />
+  <meta property="og:title" content="DDF x Pixel — Made for your moment" />
+  <meta property="og:description" content="Dance floors, backdrops, stationery and signs — printed, built and installed across the GTA." />
+  <meta property="og:url" content="https://ddfpixel.com/" />
+  <meta property="og:image" content="https://ddfpixel.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DDF x Pixel — Made for your moment" />
+  <meta name="twitter:description" content="Dance floors, backdrops, stationery and signs — printed, built and installed across the GTA." />
+  <meta name="twitter:image" content="https://ddfpixel.com/og.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DDF x Pixel",
+    "alternateName": ["Designer Dance Floors", "Pixel Production"],
+    "url": "https://ddfpixel.com/",
+    "logo": "https://ddfpixel.com/logo-ddfpixel.png",
+    "email": "hello@ddfevents.ca",
+    "areaServed": "Greater Toronto Area",
+    "description": "Custom dance floors, printed backdrops, custom structures, wedding stationery and signs for events across the GTA."
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/bp-juliette-ex2-regular.woff2" as="font" type="font/woff2" crossorigin />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Script accent font — BP-JulietteEx2 by BlessedPrint (web licence held by the owner).
+       Same file and line-metric overrides as the job system (jobs.ddfpixel.com). */
+    @font-face {
+      font-family: 'BP-JulietteEx2';
+      src: url('/fonts/bp-juliette-ex2-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      ascent-override: 95%;
+      descent-override: 30%;
+      line-gap-override: 0%;
+    }
 
+    /* ── "Soft glass" tokens — copied from ddf-intake/src/app/ui.css ── */
     :root {
-      --black: #0d0d0d;
-      --white: #ffffff;
-      --off-white: #f7f5f0;
-      --mid: #4a4a4a;
-      --border: #e0ddd8;
-      --gold: #b8955a;
-      --gold-dark: #9d7d4d;
-      --gold-light: #faf6ef;
-      --font-slab: 'Abril Fatface', serif;
-      --font-script: 'Dancing Script', cursive;
-      --font-display: 'Oswald', sans-serif;
-      --font-body: 'Montserrat', sans-serif;
+      --bg: #ebe6e1;
+      --surface: #ffffff;
+      --glass: rgba(255, 255, 255, .58);
+      --glass-line: rgba(255, 255, 255, .8);
+      --ink: #121212;
+      --ink-soft: #2c2a29;
+      --muted: #756e68;
+      --line: #e6dfd8;
+      --mauve: #b48ea8;
+      --mauve-deep: #7a4c69;
+      --mauve-wash: #f3eaf0;
+      --display: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+      --body: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+      --serif: 'BP-JulietteEx2', 'Snell Roundhand', cursive;
+      --script-ink: #772121;
+      --r-xl: 32px;
+      --r-lg: 24px;
+      --r-md: 16px;
+      --r-sm: 12px;
+      --shadow: 0 24px 60px -34px rgba(74, 44, 64, .38), 0 2px 6px -2px rgba(74, 44, 64, .06);
+      --wash: radial-gradient(900px 520px at 8% -8%, #dcc4d4 0%, rgba(220, 196, 212, 0) 62%),
+              radial-gradient(800px 480px at 100% 4%, #eadccd 0%, rgba(234, 220, 205, 0) 58%),
+              linear-gradient(180deg, #ece7e2 0%, #e5dfd9 100%);
+      --ticket-bg: radial-gradient(120% 120% at 0% 0%, #3b2634 0%, #1a1418 45%, #121212 100%);
+      color-scheme: light;
     }
 
-    html { scroll-behavior: smooth; }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
     body {
-      background: var(--white);
-      color: var(--black);
-      font-family: var(--font-body);
-      -webkit-font-smoothing: antialiased;
+      margin: 0; min-height: 100vh; color: var(--ink);
+      background: var(--wash); background-color: var(--bg);
+      font-family: var(--body); font-size: 16px; line-height: 1.55; letter-spacing: -0.005em;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    img, svg { max-width: 100%; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--mauve-deep); outline-offset: 3px; border-radius: 6px; }
+    h1, h2, h3, p { margin: 0; }
+    ul, ol { margin: 0; padding: 0; list-style: none; }
+
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 500; }
+    .skip:focus { top: 12px; }
+
+    /* ── type ── */
+    .display { font-family: var(--display); font-weight: 300; letter-spacing: -0.04em; line-height: 1.02; text-wrap: balance; }
+    .serif { font-family: var(--serif); font-style: normal; font-weight: 400; letter-spacing: 0; font-size: 1.12em; line-height: 0.9; padding-right: 0.08em; color: var(--script-ink); }
+    .display:has(.serif) { padding-bottom: 0.14em; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 500 12.5px/1 var(--body); letter-spacing: .02em; color: var(--ink-soft); background: var(--glass); border: 1px solid var(--glass-line); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 9px 14px; border-radius: 999px; }
+    .eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--mauve-deep); }
+    .lead { font-size: clamp(17px, 1.6vw, 19px); line-height: 1.55; color: var(--ink-soft); max-width: 34em; text-wrap: pretty; }
+    .muted { color: var(--muted); }
+
+    /* ── buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 48px; font: 500 15px/1 var(--body); letter-spacing: -0.005em; text-decoration: none;
+      padding: 15px 24px; border-radius: 999px; border: 1px solid transparent; cursor: pointer;
+      transition: background-color .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s;
+      white-space: nowrap; touch-action: manipulation;
+    }
+    .btn:active { transform: scale(.98); }
+    .btn svg { width: 17px; height: 17px; flex: none; }
+    .btn-ink { background: var(--ink); color: #fff; box-shadow: 0 10px 24px -12px rgba(18,18,18,.55); }
+    .btn-ink:hover { background: #2a2826; }
+    .btn-line { background: var(--glass); border-color: var(--glass-line); color: var(--ink); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+    .btn-line:hover { background: rgba(255,255,255,.88); }
+    .btn-white { background: #fff; color: var(--ink); }
+    .btn-white:hover { background: #f3eaf0; }
+    .btn-ghost-dark { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #f3eef1; }
+    .btn-ghost-dark:hover { background: rgba(255,255,255,.16); }
+    .btn-sm { min-height: 44px; padding: 11px 18px; font-size: 14px; }
+    .link { color: var(--mauve-deep); font-weight: 500; text-decoration: none; }
+    .link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ── layout ── */
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+    section { scroll-margin-top: 24px; }
+    .section { padding: 72px 0 0; }
+
+    /* ── header ── */
+    .site-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
+    .logo { height: 34px; width: auto; }
+    .head-actions { display: flex; align-items: center; gap: 10px; }
+
+    /* ── hero ── */
+    .hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .85fr); gap: 48px; align-items: center; padding: 48px 0 24px; }
+    .hero-copy { display: grid; gap: 26px; justify-items: start; }
+    .hero-title { font-size: clamp(44px, 6.6vw, 86px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .reply-note { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-soft); }
+    .reply-note .dot-live { width: 8px; height: 8px; border-radius: 50%; background: #4b6b53; box-shadow: 0 0 0 4px rgba(75,107,83,.15); }
+
+    /* dark "ticket" card */
+    .ticket { position: relative; background: var(--ticket-bg); color: #f3eef1; padding: 30px; border-radius: var(--r-xl); box-shadow: 0 30px 60px -30px rgba(40,10,30,.6); overflow: hidden; isolation: isolate; }
+    .ticket::after { content: ''; position: absolute; width: 260px; height: 260px; right: -80px; top: -100px; border-radius: 50%; background: radial-gradient(circle, rgba(180,142,168,.45), rgba(180,142,168,0) 70%); pointer-events: none; z-index: -1; }
+    .ticket .tear { border-top: 1px dashed rgba(243,238,241,.2); margin: 22px 0; }
+    .t-label { font: 500 12px/1.2 var(--body); color: rgba(243,238,241,.62); letter-spacing: .01em; }
+    .t-ref { font: 500 13px var(--body); letter-spacing: .06em; color: #e4c9da; }
+    .ticket .t-title { font-family: var(--display); font-weight: 300; letter-spacing: -0.03em; font-size: 30px; line-height: 1.1; margin-top: 10px; }
+    .t-steps { display: grid; gap: 14px; margin-top: 22px; }
+    .t-steps li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center; font-size: 15px; }
+    .t-steps .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font: 500 12px var(--body); background: rgba(255,255,255,.1); color: #f3eef1; }
+    .t-steps li:first-child .n { background: #fff; color: var(--ink); }
+    .t-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .t-foot a { color: #f3eef1; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+    .t-foot a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ── section heads ── */
+    .sec-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
+    .sec-num { font: 500 12px/1 var(--body); color: var(--ink-soft); background: rgba(255,255,255,.7); border: 1px solid var(--line); border-radius: 999px; padding: 7px 11px; transform: translateY(-6px); }
+    .sec-title { font-family: var(--display); font-size: clamp(34px, 4.4vw, 54px); font-weight: 300; letter-spacing: -0.04em; line-height: 1.04; }
+    .sec-intro { color: var(--ink-soft); max-width: 40em; margin-bottom: 34px; }
+
+    /* ── services ── */
+    .group { margin-top: 30px; }
+    .group-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .group-head h3 { font: 500 15px/1 var(--body); letter-spacing: -0.005em; }
+    .group-head .count { font: 500 12px/1 var(--body); color: var(--mauve-deep); background: var(--mauve-wash); border-radius: 999px; padding: 6px 10px; }
+    .group-head .rule { flex: 1; height: 1px; background: rgba(117,110,104,.22); }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .card { background: var(--surface); border: 1px solid rgba(255,255,255,.9); border-radius: var(--r-lg); box-shadow: var(--shadow); padding: 24px; display: grid; gap: 10px; align-content: start; transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 30px 60px -32px rgba(74, 44, 64, .45), 0 2px 6px -2px rgba(74, 44, 64, .06); }
+    .kind-icon { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--mauve-wash); color: var(--mauve-deep); margin-bottom: 8px; }
+    .kind-icon svg { width: 22px; height: 22px; }
+    .card h4 { margin: 0; font: 500 18px/1.2 var(--body); letter-spacing: -0.02em; }
+    .card p { color: var(--muted); font-size: 15px; line-height: 1.5; }
+    .card-cta { background: var(--ticket-bg); color: #f3eef1; position: relative; overflow: hidden; isolation: isolate; border-color: transparent; }
+    .card-cta::after { content: ''; position: absolute; width: 200px; height: 200px; right: -70px; top: -80px; border-radius: 50%; background: radial-gradient(circle, rgba(180,142,168,.45), rgba(180,142,168,0) 70%); z-index: -1; }
+    .card-cta .kind-icon { background: rgba(255,255,255,.1); color: #f3eef1; }
+    .card-cta p { color: rgba(243,238,241,.7); }
+    .card-cta .link { color: #f0d9e7; margin-top: 4px; display: inline-flex; align-items: center; min-height: 44px; }
+
+    /* ── gallery ──
+       To add a real photo: inside a <figure class="shot">, replace the
+       <div class="ph">…</div> placeholder with
+       <img src="work/your-photo.jpg" alt="What the photo shows" loading="lazy" width="1200" height="900">
+       The tile crops it to fit; the caption pill stays on top. */
+    .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 230px; gap: 16px; }
+    .shot { position: relative; margin: 0; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.9); background: var(--surface); }
+    .shot.big { grid-column: span 2; grid-row: span 2; }
+    .shot.wide { grid-column: span 2; }
+    .shot > img { width: 100%; height: 100%; object-fit: cover; }
+    .ph { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(122,76,105,.55); }
+    .ph svg { width: 44px; height: 44px; stroke-width: 1.2; }
+    .ph::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(122,76,105,.13) 1px, transparent 1.2px); background-size: 14px 14px; mask-image: radial-gradient(70% 70% at 50% 45%, #000 0%, transparent 100%); -webkit-mask-image: radial-gradient(70% 70% at 50% 45%, #000 0%, transparent 100%); }
+    .ph.t1 { background: radial-gradient(90% 80% at 30% 20%, #f6eff3 0%, #e4d6df 55%, #d2c3cc 100%); }
+    .ph.t2 { background: linear-gradient(160deg, #efe8e1, #ddd2c7); }
+    .ph.t3 { background: linear-gradient(160deg, #f3eaf0, #e2cfdb); }
+    .ph.t4 { background: var(--ticket-bg); color: rgba(228,201,218,.55); }
+    .ph.t4::before { background-image: radial-gradient(rgba(228,201,218,.14) 1px, transparent 1.2px); }
+    .ph.t5 { background: linear-gradient(200deg, #ebe3dc, #d9cdc4); }
+    .ph.t6 { background: radial-gradient(90% 90% at 80% 10%, #eadccd 0%, #e2d4da 60%, #d6c6cf 100%); }
+    .shot figcaption { position: absolute; left: 14px; bottom: 14px; right: 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+    .cap { font: 500 13px/1 var(--body); color: var(--ink); background: rgba(255,255,255,.72); border: 1px solid rgba(255,255,255,.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 9px 13px; border-radius: 999px; }
+    .soon { font: 500 11.5px/1 var(--body); color: var(--ink-soft); background: rgba(255,255,255,.5); padding: 7px 10px; border-radius: 999px; }
+    .shot .ph.t4 ~ figcaption .soon { color: #f3eef1; background: rgba(255,255,255,.12); }
+
+    /* ── how it works ── */
+    .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; counter-reset: s; }
+    .step { position: relative; background: var(--glass); border: 1px solid var(--glass-line); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-radius: var(--r-lg); padding: 24px; display: grid; gap: 10px; align-content: start; }
+    .step .s-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .step .s-num { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font: 500 13px var(--body); background: var(--surface); border: 1px solid var(--line); }
+    .step:first-child .s-num { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .step .s-icon { color: var(--mauve-deep); }
+    .step .s-icon svg { width: 22px; height: 22px; }
+    .step h3 { font: 500 18px/1.2 var(--body); letter-spacing: -0.02em; }
+    .step p { color: var(--ink-soft); font-size: 15px; }
+    .step::after { content: ''; position: absolute; top: 40px; right: -13px; width: 10px; height: 10px; border-top: 1.5px solid var(--mauve); border-right: 1.5px solid var(--mauve); transform: rotate(45deg); }
+    .step:last-child::after { display: none; }
+    .callout { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 20px 20px 20px 26px; border-radius: var(--r-lg); background: var(--mauve-wash); border: 1px solid rgba(255,255,255,.9); }
+    .callout p { font-size: 15.5px; color: var(--ink-soft); }
+
+    /* ── closing CTA ── */
+    .closer { margin-top: 88px; padding: clamp(36px, 6vw, 72px); text-align: left; display: grid; grid-template-columns: minmax(0, 1.3fr) auto; gap: 32px; align-items: end; }
+    .closer .display { font-size: clamp(40px, 5.6vw, 72px); color: #fff; }
+    .closer .serif { color: #e4c9da; margin-left: .06em; }
+    .closer p { color: rgba(243,238,241,.72); margin-top: 30px; max-width: 30em; }
+    .closer .cta-row { justify-content: flex-end; }
+
+    /* ── footer ── */
+    .site-foot { padding: 48px 0 40px; display: grid; grid-template-columns: auto 1fr; gap: 24px 40px; align-items: center; }
+    .site-foot .logo { height: 28px; }
+    .foot-links { display: flex; justify-content: flex-end; gap: 8px 22px; flex-wrap: wrap; font-size: 15px; }
+    .foot-links a { text-decoration: none; color: var(--ink-soft); font-weight: 500; display: inline-flex; align-items: center; min-height: 44px; }
+    .foot-links a:hover { color: var(--mauve-deep); }
+    .foot-line { grid-column: 1 / -1; border-top: 1px solid rgba(117,110,104,.22); padding-top: 20px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13.5px; color: var(--ink-soft); }
+
+    /* ── responsive ── */
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 28px; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .step::after { display: none; }
+      .closer { grid-template-columns: 1fr; align-items: start; }
+      .closer .cta-row { justify-content: flex-start; }
+    }
+    @media (max-width: 760px) {
+      .wrap { padding: 0 16px; }
+      .site-head { padding: 16px 0; }
+      .logo { height: 26px; }
+      .head-brief { display: none; }
+      .hero-title { font-size: clamp(40px, 11.4vw, 60px); }
+      .cta-row { width: 100%; }
+      .cta-row .btn { flex: 1 1 100%; }
+      .ticket { padding: 24px; }
+      .ticket .t-title { font-size: 26px; }
+      .section { padding-top: 56px; }
+      .cards, .steps { grid-template-columns: 1fr; gap: 12px; }
+      .card { grid-template-columns: 44px 1fr; column-gap: 16px; row-gap: 4px; padding: 18px; }
+      .card .kind-icon { grid-row: span 2; margin: 0; }
+      .card-cta .link { grid-column: 2; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 160px; gap: 10px; }
+      .shot.wide { grid-column: span 2; }
+      .shot figcaption { left: 10px; bottom: 10px; right: 10px; }
+      .soon { display: none; }
+      .callout { padding: 20px; }
+      .callout .cta-row .btn { flex: 1 1 100%; }
+      .closer { margin-top: 64px; border-radius: var(--r-lg); }
+      .site-foot { grid-template-columns: 1fr; }
+      .foot-links { flex-direction: column; gap: 0; }
     }
 
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 68px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-logo {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-    .nav-logo img {
-      height: 36px;
-      width: auto;
-      filter: brightness(0) invert(1);
-    }
-
-    /* keep old selectors in case referenced elsewhere */
-    .nav-wordmark .prod-text {
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .nav-links a:hover { color: var(--gold); }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--white);
-      padding: 10px 24px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    .nav-cta:hover { background: var(--gold-dark); }
-
-    /* ── HERO ── */
-    .hero {
-      background: var(--black);
-      min-height: calc(100vh - 68px);
-      display: flex;
-      align-items: center;
-      padding: 80px 48px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: 'PIXEL';
-      position: absolute;
-      right: -40px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: clamp(200px, 22vw, 340px);
-      letter-spacing: -4px;
-      color: rgba(255,255,255,0.03);
-      pointer-events: none;
-      user-select: none;
-      line-height: 1;
-    }
-
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 80px;
-    }
-
-    .hero-text { flex: 1; max-width: 620px; position: relative; z-index: 1; }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .hero-eyebrow .line { width: 32px; height: 1px; background: var(--gold); }
-    .hero-eyebrow span {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .hero h1 {
-      line-height: 1.0;
-      margin-bottom: 28px;
-    }
-    .hero h1 .line1 {
-      display: block;
-      font-family: var(--font-slab);
-      font-size: clamp(52px, 7vw, 88px);
-      color: var(--white);
-      letter-spacing: -1px;
-    }
-    .hero h1 .line2 {
-      display: block;
-      font-family: var(--font-script);
-      font-size: clamp(48px, 6.5vw, 82px);
-      color: var(--gold);
-      font-weight: 700;
-      line-height: 1.1;
-      margin-top: -4px;
-    }
-    .hero h1 .line3 {
-      display: block;
-      font-family: var(--font-display);
-      font-size: clamp(28px, 3.5vw, 44px);
-      font-weight: 700;
-      letter-spacing: 8px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      margin-top: 4px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 40px;
-      max-width: 480px;
-    }
-
-    .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--white);
-      padding: 15px 32px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .btn-primary:hover { background: var(--gold-dark); }
-
-    .btn-ghost {
-      color: rgba(255,255,255,0.6);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 2px;
-    }
-    .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
-
-    /* Hero grid cards */
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 340px;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-grid-card {
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 24px 20px;
-      aspect-ratio: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      border-radius: 6px;
-    }
-    .hero-grid-card:nth-child(1) { background: rgba(255,255,255,0.04); }
-    .hero-grid-card:nth-child(2) { background: var(--gold); border-color: var(--gold); margin-top: 24px; }
-    .hero-grid-card:nth-child(3) { background: rgba(255,255,255,0.08); margin-top: -24px; }
-    .hero-grid-card:nth-child(4) { background: rgba(255,255,255,0.04); }
-    .hero-grid-card .icon { font-size: 24px; margin-bottom: 10px; }
-    .hero-grid-card .label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: rgba(255,255,255,0.7);
-    }
-    .hero-grid-card:nth-child(2) .label { color: var(--white); }
-
-    /* ── TICKER ── */
-    .ticker {
-      background: var(--gold);
-      padding: 12px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker-inner {
-      display: inline-flex;
-      animation: ticker 24s linear infinite;
-    }
-    .ticker-item {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--white);
-      padding: 0 28px;
-    }
-    .ticker-item .dot { color: rgba(255,255,255,0.5); margin-left: 28px; }
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    /* ── SERVICES ── */
-    .services {
-      background: var(--off-white);
-      padding: 96px 48px;
-    }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-
-    .section-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .section-eyebrow .line { width: 24px; height: 1px; background: var(--gold); }
-    .section-eyebrow span {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .section-title {
-      font-family: var(--font-slab);
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 400;
-      margin-bottom: 56px;
-      max-width: 540px;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-    }
-    .section-title em {
-      font-style: italic;
-      font-family: var(--font-script);
-      font-weight: 700;
-      color: var(--gold);
-      font-size: 1.1em;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 2px;
-    }
-    .service-item {
-      background: var(--white);
-      padding: 32px 28px;
-      border: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-    .service-item::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: width 0.3s ease;
-    }
-    .service-item:hover::after { width: 100%; }
-    .service-item:hover { background: var(--gold-light); }
-
-    .service-num {
-      font-family: var(--font-display);
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-    }
-    .service-name {
-      font-family: var(--font-slab);
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.3;
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how {
-      padding: 96px 48px;
-      background: var(--white);
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 48px;
-      margin-top: 56px;
-    }
-    .step-num {
-      width: 48px;
-      height: 48px;
-      background: var(--black);
-      color: var(--white);
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      border-radius: 4px;
-    }
-    .step h3 {
-      font-family: var(--font-slab);
-      font-size: 22px;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-    .step p { font-size: 14px; line-height: 1.8; color: var(--mid); }
-
-    /* ── STATS ── */
-    .stats {
-      background: var(--black);
-      padding: 64px 48px;
-    }
-    .stats-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-    .stat {
-      text-align: center;
-    }
-    .stat-num {
-      font-family: var(--font-slab);
-      font-size: 56px;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .stat-num span { color: var(--gold); }
-    .stat-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-    }
-
-    /* ── CTA BAND ── */
-    .cta-band {
-      background: var(--off-white);
-      padding: 96px 48px;
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
-    .cta-band h2 {
-      font-family: var(--font-slab);
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .cta-band h2 em {
-      font-style: italic;
-      font-family: var(--font-script);
-      font-weight: 700;
-      color: var(--gold);
-      font-size: 1.1em;
-    }
-    .cta-band p {
-      font-size: 16px;
-      line-height: 1.75;
-      color: var(--mid);
-      margin-bottom: 40px;
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .btn-primary-dark {
-      background: var(--black);
-      color: var(--white);
-      padding: 16px 40px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .btn-primary-dark:hover { background: var(--gold); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--black);
-      color: rgba(255,255,255,0.35);
-      padding: 40px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .footer-brand { text-decoration: none; }
-    .footer-parent {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 4px;
-    }
-    .footer-pixel {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--white);
-    }
-    .footer-pixel span { color: var(--gold); }
-    .footer-addr {
-      font-size: 12px;
-      margin-top: 5px;
-      color: rgba(255,255,255,0.3);
-    }
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    footer a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; }
-    footer a:hover { color: var(--gold); }
-    .footer-copy {
-      font-size: 11px;
-      color: rgba(255,255,255,0.2);
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .hero { padding: 56px 20px; min-height: auto; }
-      .hero-grid { display: none; }
-      .hero-inner { gap: 0; }
-      .services, .how, .cta-band, .stats { padding: 64px 20px; }
-      footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
-      .ticker-item { padding: 0 20px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="/">
-      <img src="logo-pixel.png" alt="Pixel Production" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="mailto:jobs@ddfpixel.com">Contact</a></li>
-    </ul>
-    <a class="nav-cta" href="https://jobs.ddfpixel.com">Submit a Brief</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <div class="hero-eyebrow">
-          <div class="line"></div>
-          <span>Mississauga, Ontario</span>
-        </div>
-        <div style="margin-bottom: 28px;">
-          <img src="logo-pixel.png" alt="Pixel Production" style="height: 72px; width: auto; filter: brightness(0) invert(1);" />
-        </div>
-        <h1>
-          <span class="line1">Print that</span>
-          <span class="line2">makes an impression.</span>
-        </h1>
-        <p>From welcome signs and wooden backdrops to window graphics and large-format prints — production-quality results for events, brands, and businesses across the GTA.</p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="https://jobs.ddfpixel.com">Submit a Job Brief →</a>
-          <a class="btn-ghost" href="#services">See what we print</a>
-        </div>
-      </div>
-      <div class="hero-grid">
-        <div class="hero-grid-card">
-          <div class="icon">🖨️</div>
-          <div class="label">Large Format</div>
-        </div>
-        <div class="hero-grid-card">
-          <div class="icon">🪵</div>
-          <div class="label">Wooden Backdrops</div>
-        </div>
-        <div class="hero-grid-card">
-          <div class="icon">🪟</div>
-          <div class="label">Window Graphics</div>
-        </div>
-        <div class="hero-grid-card">
-          <div class="icon">✉️</div>
-          <div class="label">Cardstock Print</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-inner">
-      <span class="ticker-item">Large Format Print<span class="dot">·</span></span>
-      <span class="ticker-item">Welcome Signs<span class="dot">·</span></span>
-      <span class="ticker-item">Wooden Backdrops<span class="dot">·</span></span>
-      <span class="ticker-item">Window Graphics<span class="dot">·</span></span>
-      <span class="ticker-item">Vinyl Wraps<span class="dot">·</span></span>
-      <span class="ticker-item">Event Signage<span class="dot">·</span></span>
-      <span class="ticker-item">Cardstock Printing<span class="dot">·</span></span>
-      <span class="ticker-item">Custom Orders<span class="dot">·</span></span>
-      <span class="ticker-item">Large Format Print<span class="dot">·</span></span>
-      <span class="ticker-item">Welcome Signs<span class="dot">·</span></span>
-      <span class="ticker-item">Wooden Backdrops<span class="dot">·</span></span>
-      <span class="ticker-item">Window Graphics<span class="dot">·</span></span>
-      <span class="ticker-item">Vinyl Wraps<span class="dot">·</span></span>
-      <span class="ticker-item">Event Signage<span class="dot">·</span></span>
-      <span class="ticker-item">Cardstock Printing<span class="dot">·</span></span>
-      <span class="ticker-item">Custom Orders<span class="dot">·</span></span>
-    </div>
+  <div class="wrap">
+    <header class="site-head">
+      <a href="/" aria-label="DDF x Pixel — home">
+        <img class="logo" src="/logo-ddfpixel.png" alt="DDF x Pixel" width="840" height="137" />
+      </a>
+      <nav class="head-actions" aria-label="Main">
+        <a class="btn btn-line btn-sm" href="https://jobs.ddfpixel.com/portal">Track your job</a>
+        <a class="btn btn-ink btn-sm head-brief" href="https://jobs.ddfpixel.com/">Send a brief</a>
+      </nav>
+    </header>
   </div>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="section-inner">
-      <div class="section-eyebrow">
-        <div class="line"></div>
-        <span>What we do</span>
-      </div>
-      <h2 class="section-title">Everything you need —<br>under <em>one roof.</em></h2>
-      <div class="services-grid">
-        <div class="service-item"><div class="service-num">01</div><div class="service-name">Large Format Print</div></div>
-        <div class="service-item"><div class="service-num">02</div><div class="service-name">Welcome Signs</div></div>
-        <div class="service-item"><div class="service-num">03</div><div class="service-name">Wooden Backdrops</div></div>
-        <div class="service-item"><div class="service-num">04</div><div class="service-name">Window Graphics</div></div>
-        <div class="service-item"><div class="service-num">05</div><div class="service-name">Cardstock Printing</div></div>
-        <div class="service-item"><div class="service-num">06</div><div class="service-name">Vinyl Wraps</div></div>
-        <div class="service-item"><div class="service-num">07</div><div class="service-name">Event Signage</div></div>
-        <div class="service-item"><div class="service-num">08</div><div class="service-name">Custom Orders</div></div>
-      </div>
-    </div>
-  </section>
+  <main id="main">
+    <div class="wrap">
 
-  <!-- HOW IT WORKS -->
-  <section class="how" id="process">
-    <div class="section-inner">
-      <div class="section-eyebrow">
-        <div class="line"></div>
-        <span>The process</span>
-      </div>
-      <h2 class="section-title">Simple from<br>brief to <em>print.</em></h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Submit your brief</h3>
-          <p>Fill in your job details, upload your artwork, and set your deadline — all in one form.</p>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow">Events &amp; signs · Greater Toronto Area</span>
+          <h1 id="hero-title" class="display hero-title">We print the details your guests <span class="serif">remember.</span></h1>
+          <p class="lead">Dance floors, backdrops, stationery and signs — designed, printed and installed by one team, with every proof and approval in one place.</p>
+          <div class="cta-row">
+            <a class="btn btn-ink" href="https://jobs.ddfpixel.com/">
+              Send a brief
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-line" href="mailto:hello@ddfevents.ca">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+              hello@ddfevents.ca
+            </a>
+          </div>
+          <p class="reply-note"><span class="dot-live" aria-hidden="true"></span>We reply to every brief within 1 business day.</p>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>We review it</h3>
-          <p>Our team reviews your brief and gets back to you with confirmation and any questions.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Into production</h3>
-          <p>Once approved, your job goes straight to the production floor for printing.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Ready for you</h3>
-          <p>Pick up or receive your order on time — every time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stats-inner">
-      <div class="stat">
-        <div class="stat-num">48<span>hr</span></div>
-        <div class="stat-label">Rush Turnaround</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">8<span>+</span></div>
-        <div class="stat-label">Print Formats</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">GTA<span>.</span></div>
-        <div class="stat-label">Local Pickup</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100<span>%</span></div>
-        <div class="stat-label">Production Quality</div>
-      </div>
+        <aside class="ticket" aria-label="How a job runs">
+          <div class="t-foot">
+            <span class="t-label">Your job, start to finish</span>
+            <span class="t-ref">DDF × PIXEL</span>
+          </div>
+          <p class="t-title">One team. One link. Every step in view.</p>
+          <ol class="t-steps">
+            <li><span class="n">1</span>Send a brief — two minutes</li>
+            <li><span class="n">2</span>Get your proof to review</li>
+            <li><span class="n">3</span>Approve online</li>
+            <li><span class="n">4</span>We make &amp; install</li>
+          </ol>
+          <div class="tear"></div>
+          <div class="t-foot">
+            <span class="t-label">Already have a job with us?</span>
+            <a href="https://jobs.ddfpixel.com/portal">Track your job
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- 01 Services -->
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <h2 id="services-title" class="sec-title">Services</h2>
+        </div>
+        <p class="sec-intro">From the dance floor to the table numbers — everything printed, built and finished in-house so your day looks like it belongs together.</p>
+
+        <div class="group">
+          <div class="group-head"><h3>Events</h3><span class="count">6</span><span class="rule" aria-hidden="true"></span></div>
+          <ul class="cards">
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 5l9 4.5-9 4.5z"/><path d="M3 14.5 12 19l9-4.5"/><path d="M7.5 11.8v4.5M16.5 11.8v4.5"/></svg></span>
+              <h4>Dance Floors</h4>
+              <p>Custom printed floor wraps with your monogram, colours or design.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m7 13 3-3 3 3 2-2 2 2"/></svg></span>
+              <h4>Printed Backdrops</h4>
+              <p>Photo walls and step-and-repeats, printed big and sharp.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V11a7 7 0 0 1 14 0v10"/><path d="M9 21v-9a3 3 0 0 1 6 0v9"/><path d="M3 21h18"/></svg></span>
+              <h4>Custom Structures</h4>
+              <p>Arches, walls and displays built to your space and size.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="m3 8 9 6 9-6"/><path d="M12 3.5c.9-1 2.6-.8 2.6.7 0 1.3-2.6 2.6-2.6 2.6S9.4 5.5 9.4 4.2c0-1.5 1.7-1.7 2.6-.7z"/></svg></span>
+              <h4>Wedding Stationery</h4>
+              <p>Invitations, save-the-dates and day-of pieces that all match.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></span>
+              <h4>Menus</h4>
+              <p>Printed menus in the same look as the rest of your day.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 13H8z"/><path d="M5 21h14"/><path d="M12 16v5"/><path d="M11 7.5 12.5 6v6"/></svg></span>
+              <h4>Table Numbers</h4>
+              <p>Styled to match your tables, centrepieces and theme.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <div class="group-head"><h3>Signs &amp; products</h3><span class="count">5</span><span class="rule" aria-hidden="true"></span></div>
+          <ul class="cards">
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M7 8h7M7 12h4"/></svg></span>
+              <h4>PVC Signs</h4>
+              <p>Tough, lightweight signs for indoors or out.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="11" rx="1.5"/><path d="m8 21 4-7 4 7M12 14v7"/></svg></span>
+              <h4>Foam Board Signs</h4>
+              <p>Welcome signs, seating charts and easel displays.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="16" rx="1"/><path d="M5 18.5h14a1.5 1.5 0 0 1 0 3H5a1.5 1.5 0 0 1 0-3z"/><path d="M10 7h4M10 10h4"/></svg></span>
+              <h4>Pull-Out Banners</h4>
+              <p>Roll-up banners that set up in seconds for shows and pop-ups.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6z"/><path d="M20 12h-5a3 3 0 0 0-3 3v5"/></svg></span>
+              <h4>Stickers</h4>
+              <p>Custom stickers and labels, cut to any shape.</p>
+            </li>
+            <li class="card">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10c2 1 4-1 6 0s4 1 4 1M7 14c2-1 4 1 6 0"/></svg></span>
+              <h4>Wooden Products</h4>
+              <p>Wood signs, cut-outs and keepsakes made to order.</p>
+            </li>
+            <li class="card card-cta">
+              <span class="kind-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></span>
+              <h4>Something else?</h4>
+              <p>If it can be printed, cut or built, tell us about it.</p>
+              <a class="link" href="https://jobs.ddfpixel.com/">Send a brief →</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 02 Our work -->
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <h2 id="work-title" class="sec-title">Our work</h2>
+        </div>
+        <p class="sec-intro">Photos from recent weddings, galas and brand events are on their way.</p>
+
+        <div class="gallery">
+          <figure class="shot big">
+            <div class="ph t1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 5l9 4.5-9 4.5z"/><path d="M3 14.5 12 19l9-4.5"/></svg></div>
+            <figcaption><span class="cap">Dance floors</span><span class="soon">Photo coming soon</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="ph t3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="m7 13 3-3 3 3 2-2 2 2"/></svg></div>
+            <figcaption><span class="cap">Backdrops</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="ph t2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div>
+            <figcaption><span class="cap">Stationery</span></figcaption>
+          </figure>
+          <figure class="shot wide">
+            <div class="ph t4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V11a7 7 0 0 1 14 0v10"/><path d="M9 21v-9a3 3 0 0 1 6 0v9"/></svg></div>
+            <figcaption><span class="cap">Custom structures</span><span class="soon">Photo coming soon</span></figcaption>
+          </figure>
+          <figure class="shot wide">
+            <div class="ph t5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="11" rx="1.5"/><path d="m8 21 4-7 4 7"/></svg></div>
+            <figcaption><span class="cap">Welcome signs</span><span class="soon">Photo coming soon</span></figcaption>
+          </figure>
+          <figure class="shot wide">
+            <div class="ph t6" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="16" rx="1"/><path d="M5 18.5h14a1.5 1.5 0 0 1 0 3H5a1.5 1.5 0 0 1 0-3z"/></svg></div>
+            <figcaption><span class="cap">Banners &amp; brand signs</span><span class="soon">Photo coming soon</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 03 How it works -->
+      <section id="how" class="section" aria-labelledby="how-title">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <h2 id="how-title" class="sec-title">How it works</h2>
+        </div>
+        <p class="sec-intro">No back-and-forth email chains. Your brief, proofs and approvals all live on one page you can check any time.</p>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="s-top"><span class="s-num">1</span><span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span></div>
+            <h3>Send a brief</h3>
+            <p>Tell us what you're making, the date and any inspiration. Takes a couple of minutes.</p>
+          </li>
+          <li class="step">
+            <div class="s-top"><span class="s-num">2</span><span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 9"/></svg></span></div>
+            <h3>Get your proof</h3>
+            <p>We design it and send a proof with your quote, so you see it before anything is made.</p>
+          </li>
+          <li class="step">
+            <div class="s-top"><span class="s-num">3</span><span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg></span></div>
+            <h3>Approve online</h3>
+            <p>Ask for changes or approve with one tap — from your phone, any time.</p>
+          </li>
+          <li class="step">
+            <div class="s-top"><span class="s-num">4</span><span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span></div>
+            <h3>We make &amp; install</h3>
+            <p>We print, build and set it up on site, so it's ready when your guests arrive.</p>
+          </li>
+        </ol>
+
+        <div class="callout">
+          <p>Already sent us a brief? Check your proof and progress any time.</p>
+          <div class="cta-row" style="width:auto">
+            <a class="btn btn-ink btn-sm" href="https://jobs.ddfpixel.com/">Send a brief</a>
+            <a class="btn btn-line btn-sm" href="https://jobs.ddfpixel.com/portal">Track your job</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing call to action -->
+      <section class="ticket closer" aria-labelledby="closer-title">
+        <div>
+          <span class="t-label">Planning something?</span>
+          <h2 id="closer-title" class="display" style="margin-top:14px">Let's make it <span class="serif">memorable.</span></h2>
+          <p>Send us a brief and we'll come back with ideas, a quote and a proof — usually within one business day.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-white" href="https://jobs.ddfpixel.com/">
+            Send a brief
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost-dark" href="mailto:hello@ddfevents.ca">hello@ddfevents.ca</a>
+        </div>
+      </section>
     </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="site-foot">
+      <img class="logo" src="/logo-ddfpixel.png" alt="DDF x Pixel" width="840" height="137" loading="lazy" />
+      <nav class="foot-links" aria-label="Footer">
+        <a href="mailto:hello@ddfevents.ca">hello@ddfevents.ca</a>
+        <a href="https://jobs.ddfpixel.com/portal">Track your job</a>
+        <a href="https://jobs.ddfpixel.com/">Send a brief</a>
+      </nav>
+      <div class="foot-line">
+        <span>Pixel Production × Designer Dance Floors · GTA</span>
+        <a class="link" href="#main">Back to top ↑</a>
+      </div>
+    </footer>
   </div>
-
-  <!-- CTA BAND -->
-  <section class="cta-band">
-    <div class="section-eyebrow" style="justify-content: center; margin-bottom: 20px;">
-      <div class="line"></div>
-      <span>Ready to get started?</span>
-      <div class="line"></div>
-    </div>
-    <h2>Let's bring your<br>vision <em>to life.</em></h2>
-    <p>Submit your brief online — no back-and-forth needed. Our team gets straight to work.</p>
-    <a class="btn-primary-dark" href="https://jobs.ddfpixel.com">Submit a Job Brief →</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div>
-      <a href="/" style="display: block; margin-bottom: 6px;">
-        <img src="logo-pixel.png" alt="Pixel Production" style="height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;" />
-      </a>
-      <a href="https://designerdancefloors.com" style="display: block; margin-bottom: 8px;">
-        <img src="logo-ddf.png" alt="Designer Dance Floors" style="height: 22px; width: auto; filter: brightness(0) invert(1); opacity: 0.35;" />
-      </a>
-      <div class="footer-addr">6730 Davand Drive, Unit 6/7 — Mississauga, Ontario</div>
-    </div>
-    <div class="footer-links">
-      <a href="mailto:jobs@ddfpixel.com">jobs@ddfpixel.com</a>
-      <a href="https://jobs.ddfpixel.com">Submit a Brief</a>
-      <a href="https://jobs.ddfpixel.com/login">Client Portal</a>
-    </div>
-    <div class="footer-copy">
-      <span>© 2026 Designer Dance Floors — Pixel Production. All rights reserved.</span>
-      <span>Mississauga, Ontario</span>
-    </div>
-  </footer>
-
 </body>
 </html>
